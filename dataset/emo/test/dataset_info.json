@@ -1,0 +1,62 @@
+{
+  "builder_name": "emo",
+  "citation": "@inproceedings{chatterjee-etal-2019-semeval,\n    title={SemEval-2019 Task 3: EmoContext Contextual Emotion Detection in Text},\n    author={Ankush Chatterjee and Kedhar Nath Narahari and Meghana Joshi and Puneet Agrawal},\n    booktitle={Proceedings of the 13th International Workshop on Semantic Evaluation},\n    year={2019},\n    address={Minneapolis, Minnesota, USA},\n    publisher={Association for Computational Linguistics},\n    url={https://www.aclweb.org/anthology/S19-2005},\n    doi={10.18653/v1/S19-2005},\n    pages={39--48},\n    abstract={In this paper, we present the SemEval-2019 Task 3 - EmoContext: Contextual Emotion Detection in Text. Lack of facial expressions and voice modulations make detecting emotions in text a challenging problem. For instance, as humans, on reading ''Why don't you ever text me!'' we can either interpret it as a sad or angry emotion and the same ambiguity exists for machines. However, the context of dialogue can prove helpful in detection of the emotion. In this task, given a textual dialogue i.e. an utterance along with two previous turns of context, the goal was to infer the underlying emotion of the utterance by choosing from four emotion classes - Happy, Sad, Angry and Others. To facilitate the participation in this task, textual dialogues from user interaction with a conversational agent were taken and annotated for emotion classes after several data processing steps. A training data set of 30160 dialogues, and two evaluation data sets, Test1 and Test2, containing 2755 and 5509 dialogues respectively were released to the participants. A total of 311 teams made submissions to this task. The final leader-board was evaluated on Test2 data set, and the highest ranked submission achieved 79.59 micro-averaged F1 score. Our analysis of systems submitted to the task indicate that Bi-directional LSTM was the most common choice of neural architecture used, and most of the systems had the best performance for the Sad emotion class, and the worst for the Happy emotion class}\n}\n",
+  "config_name": "emo2019",
+  "dataset_size": 2854740,
+  "description": "In this dataset, given a textual dialogue i.e. an utterance along with two previous turns of context, the goal was to infer the underlying emotion of the utterance by choosing from four emotion classes - Happy, Sad, Angry and Others.\n",
+  "download_checksums": {
+    "https://drive.google.com/uc?id=12Uz59TYg_NtxOy7SXraYeXPMRT7oaO7X": {
+      "num_bytes": 2867411,
+      "checksum": null
+    },
+    "https://drive.google.com/uc?id=1Hn5ytHSSoGOC4sjm3wYy0Dh0oY_oXBbb": {
+      "num_bytes": 495145,
+      "checksum": null
+    }
+  },
+  "download_size": 3362556,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "names": [
+        "others",
+        "happy",
+        "sad",
+        "angry"
+      ],
+      "_type": "ClassLabel"
+    }
+  },
+  "homepage": "https://www.aclweb.org/anthology/S19-2005/",
+  "license": "",
+  "size_in_bytes": 6217296,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 2433189,
+      "num_examples": 30160,
+      "dataset_name": "emo"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 421551,
+      "num_examples": 5509,
+      "dataset_name": "emo"
+    }
+  },
+  "task_templates": [
+    {
+      "task": "text-classification",
+      "label_column": "label"
+    }
+  ],
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
